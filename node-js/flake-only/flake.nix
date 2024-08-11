@@ -24,7 +24,8 @@
         ];
 
         shellHook = ''
-          echo '---Development Environment Activated---\n'
+          echo "---Development Environment Activated---"
+          echo
           echo "[Dependencies]"
           echo "└─(NodeJS)──> $(node --version)"
         '';

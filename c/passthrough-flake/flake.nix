@@ -1,1 +1,1 @@
-/home/brandon/Templates/code/nix-shell/flake.nix
+/home/brandon/Templates/code/nix-shell/passthrough.flake.nix

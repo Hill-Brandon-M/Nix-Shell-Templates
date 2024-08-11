@@ -26,7 +26,8 @@
         ];
 
         shellHook = ''
-          echo '---Development Environment Activated---\n'
+          echo "---Development Environment Activated---"
+          echo
           echo "[Dependencies]"
           echo "├─(Java)───────> $(java --version)"
           echo "├─(Maven)──────> $(mvn --version)"
