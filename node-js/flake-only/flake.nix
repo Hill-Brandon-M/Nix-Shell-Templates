@@ -2,7 +2,7 @@
 
 {
   
-  description = "An empty template importing a nix shell";
+  description = "A flake template for NodeJS projects";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
