@@ -1,0 +1,1 @@
+/home/brandon/Templates/code/nix-shell/rust/shell.nix
