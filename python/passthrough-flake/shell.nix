@@ -1,1 +1,1 @@
-/home/brandon/Templates/code/nix-shell/python/shell.nix
+../shell.nix

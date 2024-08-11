@@ -1,1 +1,1 @@
-/home/brandon/Templates/code/nix-shell/node-js/shell.nix
+../shell.nix

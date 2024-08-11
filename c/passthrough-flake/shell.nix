@@ -1,1 +1,1 @@
-/home/brandon/Templates/code/nix-shell/c/shell.nix
+../shell.nix
