@@ -32,6 +32,7 @@
           echo "├─(Java)───────> $(java --version)"
           echo "├─(Maven)──────> $(mvn --version)"
           echo "└─(Spring CLI)─> $(spring --version)"
+          echo
         '';
 
         # VARIABLE = "VALUE";

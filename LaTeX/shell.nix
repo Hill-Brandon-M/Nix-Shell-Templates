@@ -13,6 +13,7 @@
       echo
       echo "[Dependencies]"
       echo "└─(TeX Live)───> $(tex --version)"
+      echo
     '';
 
     # VARIABLE = "VALUE";

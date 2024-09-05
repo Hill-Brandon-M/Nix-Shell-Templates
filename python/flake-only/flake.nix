@@ -38,6 +38,7 @@
           echo
           echo "[Dependencies]"
           echo "└─(Python)──> $(python --version)"
+          echo
         '';
 
         # VARIABLE = "VALUE";

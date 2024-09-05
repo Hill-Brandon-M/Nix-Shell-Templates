@@ -26,6 +26,7 @@
         shellHook = ''
           # ...
           echo "Hello, Flake World!"
+          echo
         '';
 
         # VARIABLE = "VALUE";

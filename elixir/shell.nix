@@ -13,6 +13,7 @@
       echo
       echo "[Dependencies]"
       echo "└─(Elixir)───────> $(elixir --version)"
+      echo
     '';
 
     # VARIABLE = "VALUE";

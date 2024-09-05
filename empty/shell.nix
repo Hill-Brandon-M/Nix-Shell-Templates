@@ -11,6 +11,7 @@
     shellHook = ''
       # ...
       echo "Hello, Shell World!"
+      echo
     '';
 
     # VARIABLE = "VALUE";

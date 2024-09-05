@@ -28,6 +28,7 @@
           echo
           echo "[Dependencies]"
           echo "└─(NodeJS)──> $(node --version)"
+          echo
         '';
 
         # VARIABLE = "VALUE";

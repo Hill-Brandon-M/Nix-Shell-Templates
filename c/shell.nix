@@ -15,6 +15,7 @@
       echo "[Dependencies]"
       echo "├─(GCC)───> $(gcc --version)"
       echo "└─(Make)──> $(make --version)"
+      echo
     '';
 
     # VARIABLE = "VALUE";

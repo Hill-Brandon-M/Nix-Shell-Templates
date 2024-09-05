@@ -33,6 +33,7 @@
         echo "├─(Rustup)──> $(rustup --version)"
         echo "├─(Clang)───> $(clang --version)"
         echo "└─(LLVM)────> $(size --version)"
+        echo
         '';
       
       # Add precompiled library to rustc search path
