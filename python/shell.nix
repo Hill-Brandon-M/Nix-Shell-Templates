@@ -12,7 +12,7 @@
         # scipy
         # matplotlib
         # scikit-learn
-        # jupyter
+        # jupyterlab
         # pandas
         # requests
       ]))
