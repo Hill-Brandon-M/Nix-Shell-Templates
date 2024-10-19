@@ -21,6 +21,7 @@
         
         nativeBuildInputs = with pkgs; [
           nodejs_22
+          corepack
           deno
           bun
         ];
