@@ -14,6 +14,8 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
 
+      appName = "example";
+
       overrides = (builtins.fromTOML (builtins.readFile ./rust-toolchain.toml));
       libPath = with pkgs; lib.makeLibraryPath [
         # TODO: load external libraries that you need in your rust project here
@@ -42,9 +44,9 @@
           echo "---Development Environment Activated---"
           echo
           echo "[Dependencies]"
-          echo "├─(Rustup)──> $(rustup --version)"
-          echo "├─(Clang)───> $(clang --version)"
-          echo "└─(LLVM)────> $(size --version)"
+          echo "├─(Rustup)
+          echo "├─(Clang)
+          echo "└─(LLVM)
           echo
           '';
         
@@ -68,6 +70,27 @@
           ''-I"${pkgs.glib.dev}/include/glib-2.0"''
           ''-I${pkgs.glib.out}/lib/glib-2.0/include/''
         ];
-      }
+      };
+
+      apps.${system}.default = pkgs.stdenv.mkDerivation {
+        
+        name = appName;
+        inherit system;
+        
+        src = ".";
+        
+        nativeBuildInputs = [pkgs.cargo];
+        
+        buildPhase = ''
+          cargo build --release
+        '';
+        
+        installPhase = ''
+          mkdir -p $out/bin
+          cp target/release/${appName} $out/bin/${appName}
+          chmod +x $out
+        '';
+      };
+
     };
 }
