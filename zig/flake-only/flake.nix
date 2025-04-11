@@ -10,7 +10,7 @@
 
   outputs = { self, nixpkgs, ... }: 
     let 
-      
+      appName = "example";      
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     
@@ -33,6 +33,26 @@
 
         # VARIABLE = "VALUE";
         # FILE = import ./something-else.nix
+      };
+
+      apps.${system}.default = pkgs.stdenv.mkDerivation {
+        
+        name = appName;
+        inherit system;
+        
+        src = ".";
+        
+        nativeBuildInputs = [pkgs.zig];
+        
+        buildPhase = ''
+          zig build-exe main.zig
+        '';
+        
+        installPhase = ''
+          mkdir -p $out/bin
+          cp target/release/${appName} $out/bin/${appName}
+          chmod +x $out
+        '';
       };
     };
 }
