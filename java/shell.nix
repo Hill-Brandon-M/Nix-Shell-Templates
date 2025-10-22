@@ -14,8 +14,8 @@
       echo "---Development Environment Activated---"
       echo
       echo "[Dependencies]"
-      echo "├─(Java)───────> $(java --version)"
-      echo "├─(Maven)──────> $(mvn --version)"
+      echo "├─(Java)───────> $(java --version | head -n 1)"
+      echo "├─(Maven)──────> $(mvn --version | head -n 1)"
       echo "└─(Spring CLI)─> $(spring --version)"
       echo
     '';
